@@ -1,0 +1,49 @@
+WidgetsExample:
+
+
+
+
+
+
+<WidgetsExample>:
+   
+
+    orientation: "vertical"
+    padding: 50
+    spacing: 20
+    
+    canvas.before:
+        Color:
+            rgba: (3/255 , 23/255 , 20/255 ,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+                 
+           
+    Label:
+        text: root.my_text
+        font_name: "fonts/Lcd.ttf"        
+        font_size: "80dp"
+        color: 1, .5,.5
+    Button:
+        text: "Count"
+        on_press: root.on_button_click_1()
+        on_release: root.not_pressed()
+        size_hint:.15,.35
+        pos_hint: {'center_x': 0.5}
+        background_color: 0 , 0 , 0 , 0
+        
+
+        Image:
+           
+            source: root.sourcet
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+            allow_stretch: True
+    Button:
+        text: "Reset"
+        on_press: root.on_button_click_2()
+        size_hint:.12,.15
+        
+    
+   
